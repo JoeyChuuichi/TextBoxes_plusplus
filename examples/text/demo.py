@@ -9,7 +9,9 @@ from nms import nms
 from crop_image import crop_image
 
 # Make sure that caffe is on the python path:
-caffe_root = './'  # this file is expected to be in {caffe_root}/examples
+caffe_root = '../../'  # this file is expected to be in {caffe_root}/examples
+####
+
 import os
 os.chdir(caffe_root)
 import sys
