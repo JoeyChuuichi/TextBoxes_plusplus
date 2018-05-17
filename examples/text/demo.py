@@ -10,8 +10,10 @@ from crop_image import crop_image
 
 # Make sure that caffe is on the python path:
 caffe_root = '../../'  # this file is expected to be in {caffe_root}/examples
-####
 
+print "root1 ="
+print os.getcwd()
+#####
 import os
 os.chdir(caffe_root)
 import sys
@@ -44,6 +46,8 @@ config = {
 }
 
 def prepare_network(config):
+	print "root2 ="
+	print os.getcwd()
 	net = caffe.Net(config['model_def'],	 # defines the structure of the model
                 config['model_weights'],  # contains the trained weights
                 caffe.TEST)     # use test mode (e.g., don't perform dropout)
